@@ -2,10 +2,10 @@
 
 A:
 
-用除法為例：
-	**3 / 2＝1**
-	**3.0 / 2 ＝ 1.5**
-因為在程式運算裡Fixnum的結果也為整數,故會把小數捨去,而Float則是有浮點數.
+    用除法為例：
+	    **3 / 2＝1**
+	    **3.0 / 2 ＝ 1.5**
+    因為在程式運算裡Fixnum的結果也為整數,故會把小數捨去,而Float則是有浮點數.
 	
 ***
 
@@ -21,18 +21,18 @@ puts "#{str1}#{str2}"
 
 A:
 
-puts str1 + str2  
-**字串直接連接,會耗損記憶體**
+    puts str1 + str2  
+    字串直接連接,會耗損記憶體
 
-puts "#{str1}#{str2}"
-**是以內插方式,把原有的字串叫出印出**
+    puts "#{str1}#{str2}"
+    是以內插方式,把原有的字串叫出印出
 	
 ***
 
 3.請解釋 array 和 hash 的不同處
 	
-array 有固定的陣列排序,使用index叫出對應的array的值
-hash則可以指定值對應哪個key,想要取哪個值叫出該值的key
+    array 有固定的陣列排序,使用index叫出對應的array的值
+    hash則可以指定值對應哪個key,想要取哪個值叫出該值的key
 	
 ***
 
@@ -46,10 +46,10 @@ hash則可以指定值對應哪個key,想要取哪個值叫出該值的key
 
 A:
 
-(1)rand(0..10)
+    (1)rand(0..10)
 
-(2)array = [1,2,3,4,5]
-array.sort_by{rand}
+    (2)array = [1,2,3,4,5]
+    array.sort_by{rand}
 	
 ***
 
@@ -57,52 +57,52 @@ array.sort_by{rand}
 
 A:
 	
-def  first
-	begin
-		puts "please enter the first number:"
-		num1 = gets.chomp.to_i
-	end while ![1,2,3,4,5,6,7,8,9,10].include?(num1)
-  end
+    def  first
+	    begin
+		    puts "please enter the first number:"
+		    num1 = gets.chomp.to_i
+	    end while ![1,2,3,4,5,6,7,8,9,10].include?(num1)
+     end
 
-def second 
-	begin
-		puts "please enter the second number:"
-		num2 = gets.chomp.to_i
-	end while ![1,2,3,4,5,6,7,8,9,10].include?(num2)
-end
+    def second 
+	    begin
+		    puts "please enter the second number:"
+		    num2 = gets.chomp.to_i
+	    end while ![1,2,3,4,5,6,7,8,9,10].include?(num2)
+    end
 
-def check_operation
-  begin
-    puts "please enter your operation:"
-    puts "1) add 2) substract 3) multiply 4) divide"
-    operation = gets.chomp.to_i
-  end while ![1,2,3,4].include?(operation)
+    def check_operation
+      begin
+        puts "please enter your operation:"
+        puts "1) add 2) substract 3) multiply 4) divide"
+        operation = gets.chomp.to_i
+      end while ![1,2,3,4].include?(operation)
 
- return operation
-end
+     return operation
+     end
 
-def calculate(operation, num1, num2)
-  case operation  
-  when 1 
-    puts "your answer is: #{num1 + num2}"
-  when 2 
-    puts "your answer is: #{num1 - num2}"
-  when 3
-    puts "your answer is: #{num1 * num2}"
-  else
-    puts "your answer is: #{num1.to_f / num2.to_f}"
-  end
-end
+    def calculate(operation, num1, num2)
+      case operation  
+      when 1 
+        puts "your answer is: #{num1 + num2}"
+      when 2 
+        puts "your answer is: #{num1 - num2}"
+      when 3
+        puts "your answer is: #{num1 * num2}"
+      else
+        puts "your answer is: #{num1.to_f / num2.to_f}"
+      end
+    end
 
-#--------------Main program starts here-----------------
+    #--------------Main program starts here-----------------
 
-puts "Welcome ruby calculator!!!"
+    puts "Welcome ruby calculator!!!"
 
-num1 = first()
-num2 = second()
+    num1 = first()
+    num2 = second()
 
-operation = check_operation()
-calculate(operation, num1, num2)
+    operation = check_operation()
+    calculate(operation, num1, num2)
 	
 
 ***
