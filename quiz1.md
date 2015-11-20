@@ -115,24 +115,23 @@ A:
 
 A:
 	
-1
+    1
 	
 ***
 
 8.請問 binding.pry 是什麼？ 要如何使用它？
 	
-binding.pry是攔截呼叫物件,在檢查程式碼時可以放在需要檢查的最後在pry上debug,更能插入在程式碼裡
+    binding.pry是攔截呼叫物件,在檢查程式碼時可以放在需要檢查的最後在pry上debug,更能插入在程式碼裡
 	
 ***
 
 9.下面的一段程式碼，請嘗試用其他方法把 if...else...end 簡化成一行
 	
-var = 5
+    var = 5
 
 if var >= 5
   return "var is greater than or equal to 5"
 else
   return "var is less than 5"
-end# ntu_ror_quiz
-# ntu_ror_quiz
+    end
 	
